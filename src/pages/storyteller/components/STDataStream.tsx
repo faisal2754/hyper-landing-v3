@@ -3,7 +3,6 @@ import { useReducedMotion } from '../../../shared/hooks/useReducedMotion'
 import {
   setupGsapScroll,
   gsap,
-  ScrollTrigger,
 } from '../../../shared/utils/gsapScrollSetup'
 
 /**

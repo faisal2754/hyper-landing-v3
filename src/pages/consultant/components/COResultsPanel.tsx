@@ -53,7 +53,7 @@ function ResultsRadarChart() {
   const radius = 120
   const count = RESULT_LABELS.length
 
-  const labelOffsets: { dx: number; dy: number; anchor: string }[] = [
+  const labelOffsets: { dx: number; dy: number; anchor: 'inherit' | 'start' | 'middle' | 'end' }[] = [
     { dx: 0, dy: -12, anchor: 'middle' },
     { dx: 14, dy: 3, anchor: 'start' },
     { dx: 8, dy: 12, anchor: 'start' },
@@ -150,18 +150,21 @@ const recommendations: Recommendation[] = [
     title: 'Automate Monthly Reporting',
     description:
       'Connect your top 3 data sources to eliminate 20+ hours of manual reporting work per week. ROI visible in 30 days.',
+    type: 'quick',
   },
   {
     tag: 'Key Investment',
     title: 'Build a Central Data Warehouse',
     description:
       'Consolidate scattered data into a single, queryable source of truth. Foundation for all future analytics and AI.',
+    type: 'invest',
   },
   {
     tag: 'Long-term Goal',
     title: 'Enable Predictive Analytics',
     description:
       'Once your data foundation is solid, unlock AI-powered forecasting, anomaly detection, and natural language queries.',
+    type: 'long',
   },
 ]
 

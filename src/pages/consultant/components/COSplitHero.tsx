@@ -56,7 +56,7 @@ function RadarChart() {
   const count = RADAR_LABELS.length
 
   // Label offsets for readability
-  const labelOffsets: { dx: number; dy: number; anchor: string }[] = [
+  const labelOffsets: { dx: number; dy: number; anchor: 'inherit' | 'start' | 'middle' | 'end' }[] = [
     { dx: 0, dy: -14, anchor: 'middle' },     // top
     { dx: 16, dy: 4, anchor: 'start' },       // right-top
     { dx: 10, dy: 14, anchor: 'start' },      // right-bottom
