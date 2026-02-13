@@ -1,27 +1,34 @@
+import { motion } from 'framer-motion'
+import { SiSalesforce, SiHubspot, SiSap, SiQuickbooks, SiGooglesheets } from 'react-icons/si'
+import { TbChartBar, TbBrain, TbFileAnalytics } from 'react-icons/tb'
 import { solution } from '../../../data/content'
 import { ScrollReveal } from '../../../shared/components/ScrollReveal'
 
 const DATA_SOURCES = [
-  { logo: 'SF', name: 'Salesforce' },
-  { logo: 'HS', name: 'HubSpot' },
-  { logo: 'SAP', name: 'SAP' },
-  { logo: 'QB', name: 'QuickBooks' },
-  { logo: 'GS', name: 'Google Sheets' },
+  { icon: SiSalesforce, color: '#00A1E0', name: 'Salesforce' },
+  { icon: SiHubspot, color: '#FF7A59', name: 'HubSpot' },
+  { icon: SiSap, color: '#0FAAFF', name: 'SAP' },
+  { icon: SiQuickbooks, color: '#2CA01C', name: 'QuickBooks' },
+  { icon: SiGooglesheets, color: '#34A853', name: 'Google Sheets' },
 ]
 
 const OUTPUTS = [
-  { logo: 'BI', name: 'Dashboards' },
-  { logo: 'AI', name: 'AI & ML' },
-  { logo: 'RPT', name: 'Reports' },
+  { icon: TbChartBar, color: '#1a3a5c', name: 'Dashboards' },
+  { icon: TbBrain, color: '#1a3a5c', name: 'AI & ML' },
+  { icon: TbFileAnalytics, color: '#1a3a5c', name: 'Reports' },
 ]
 
 function ArrowIndicator() {
   return (
-    <div className="au-dataflow__arrows">
+    <motion.div
+      className="au-dataflow__arrows"
+      animate={{ x: [0, 4, 0] }}
+      transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+    >
       <svg width="32" height="12" viewBox="0 0 32 12" fill="none" aria-hidden="true">
         <path d="M0 6h28m0 0l-4-4m4 4l-4 4" stroke="#8899aa" strokeWidth="1.5" />
       </svg>
-    </div>
+    </motion.div>
   )
 }
 
@@ -37,47 +44,71 @@ export function AUDataFlow() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.1}>
-          <div className="au-dataflow__visual">
-            {/* Source column */}
-            <div className="au-dataflow__column">
-              {DATA_SOURCES.map((source) => (
-                <div key={source.name} className="au-dataflow__node">
-                  <span className="au-dataflow__node-logo">{source.logo}</span>
-                  <span>{source.name}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Center: arrows + platform */}
-            <div className="au-dataflow__center">
-              <ArrowIndicator />
-
-              <div className="au-dataflow__platform">
-                <div className="au-dataflow__platform-block">
-                  <div className="au-dataflow__platform-name">HyperFlow</div>
-                  <div className="au-dataflow__platform-desc">Connect &amp; Sync</div>
-                </div>
-                <div className="au-dataflow__platform-block">
-                  <div className="au-dataflow__platform-name">HyperStore</div>
-                  <div className="au-dataflow__platform-desc">Store &amp; Query</div>
-                </div>
-              </div>
-
-              <ArrowIndicator />
-            </div>
-
-            {/* Output column */}
-            <div className="au-dataflow__column au-dataflow__column--right">
-              {OUTPUTS.map((output) => (
-                <div key={output.name} className="au-dataflow__node">
-                  <span className="au-dataflow__node-logo">{output.logo}</span>
-                  <span>{output.name}</span>
-                </div>
-              ))}
-            </div>
+        <div className="au-dataflow__visual">
+          {/* Source column */}
+          <div className="au-dataflow__column">
+            {DATA_SOURCES.map((source, i) => (
+              <motion.div
+                key={source.name}
+                className="au-dataflow__node"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+                whileHover={{ borderColor: '#1a3a5c', y: -2 }}
+              >
+                <span className="au-dataflow__node-icon">
+                  <source.icon size={20} color={source.color} />
+                </span>
+                <span>{source.name}</span>
+              </motion.div>
+            ))}
           </div>
-        </ScrollReveal>
+
+          {/* Center: arrows + platform */}
+          <div className="au-dataflow__center">
+            <ArrowIndicator />
+
+            <motion.div
+              className="au-dataflow__platform"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              <div className="au-dataflow__platform-block">
+                <div className="au-dataflow__platform-name">HyperFlow</div>
+                <div className="au-dataflow__platform-desc">Connect &amp; Sync</div>
+              </div>
+              <div className="au-dataflow__platform-block">
+                <div className="au-dataflow__platform-name">HyperStore</div>
+                <div className="au-dataflow__platform-desc">Store &amp; Query</div>
+              </div>
+            </motion.div>
+
+            <ArrowIndicator />
+          </div>
+
+          {/* Output column */}
+          <div className="au-dataflow__column au-dataflow__column--right">
+            {OUTPUTS.map((output, i) => (
+              <motion.div
+                key={output.name}
+                className="au-dataflow__node"
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 + i * 0.08, duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+                whileHover={{ borderColor: '#1a3a5c', y: -2 }}
+              >
+                <span className="au-dataflow__node-icon">
+                  <output.icon size={20} color={output.color} />
+                </span>
+                <span>{output.name}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
         {/* Product detail cards */}
         <ScrollReveal delay={0.15}>

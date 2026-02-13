@@ -213,12 +213,9 @@ export const comparison: ComparisonSection = {
   rows: [
     { capability: 'Fully managed service', hyper: '✓', databricks: '✗', diy: '✗' },
     { capability: 'No data team required', hyper: '✓', databricks: '✗', diy: '✗' },
-    { capability: '200+ pre-built connectors', hyper: '✓', databricks: '✓', diy: '✗' },
     { capability: 'Typical setup under 6 weeks', hyper: '✓', databricks: '✗', diy: '✗' },
     { capability: 'Fixed monthly pricing', hyper: '✓', databricks: '✗', diy: '✗' },
     { capability: 'Dedicated support team', hyper: '✓', databricks: '✗', diy: '✗' },
-    { capability: 'Enterprise-grade security', hyper: '✓', databricks: '✓', diy: '~' },
-    { capability: 'Custom dashboards & analytics', hyper: '✓', databricks: '✓', diy: '✓' },
     { capability: 'Typical monthly cost', hyper: '$$', databricks: '$$$$', diy: '$$$$' },
   ],
 }
