@@ -3,7 +3,7 @@ import { SkipToContent } from '../../shared/components/SkipToContent'
 import { AUNav } from './components/AUNav'
 import { AUHero } from './components/AUHero'
 import { AUProblem } from './components/AUProblem'
-import { AUDataFlow } from './components/AUDataFlow'
+import { AUDataFlowVariants } from './components/AUDataFlowVariants'
 import { AUStatsWall } from './components/AUStatsWall'
 import { AUTestimonials } from './components/AUTestimonials'
 import { AUProcess } from './components/AUProcess'
@@ -23,7 +23,7 @@ export default function AuthorityPage() {
 
         <AUProblem />
 
-        <AUDataFlow />
+        <AUDataFlowVariants />
 
         <AUStatsWall />
 

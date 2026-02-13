@@ -46,13 +46,13 @@ export interface HeroContent {
 }
 
 export const hero: HeroContent = {
-  eyebrow: 'Data infrastructure for growth-stage companies',
-  headline: 'Your data.\nFinally handled.',
+  eyebrow: 'Managed analytics infrastructure for mid-market companies',
+  headline: 'From scattered data\nto clear answers.',
   subheadline:
-    'We connect your scattered data sources, build your warehouse, and keep everything running — so you can focus on growing your business.',
+    'We connect your tools, build your data warehouse, and deliver the dashboards your team needs to make decisions — fully managed, live in weeks.',
   ctas: [
-    { label: 'Book a 30-Minute Intro Call', href: '#contact', variant: 'primary' },
-    { label: 'Take Our Diagnostic', href: '#diagnostic', variant: 'secondary' },
+    { label: 'Book a Discovery Call', href: '#contact', variant: 'primary' },
+    { label: 'Take the Data Diagnostic', href: '#diagnostic', variant: 'secondary' },
   ],
 }
 
@@ -91,20 +91,20 @@ export const problem: ProblemSection = {
   headline: 'Sound familiar?',
   painPoints: [
     {
-      headline: 'Is your data scattered across dozens of disconnected tools?',
-      body: 'Sales in Salesforce. Marketing in HubSpot. Finance in spreadsheets. Getting a single view of your business means hours of manual work every week.',
+      headline: 'Your data lives in 15 tools. Your answers live in none of them.',
+      body: "Sales in one CRM. Marketing in another. Finance in spreadsheets. When leadership asks a simple question, someone spends half a day pulling numbers from six tabs. That's not analytics — it's archaeology.",
     },
     {
-      headline: "Are AI vendors asking for 'clean data' you don't have?",
-      body: "You've heard the promise: AI will transform your business. But every vendor wants unified data you simply don't have. Your AI projects stall before they start.",
+      headline: 'You tried Databricks or Snowflake. Then you saw what it actually takes.',
+      body: "Self-service platforms promise flexibility. What they deliver is a six-figure bill, a three-month implementation, and the realisation you need a data team just to keep the lights on.",
     },
     {
-      headline: 'Did the enterprise data platform quote make you close the tab?',
-      body: "You got the Snowflake + Fivetran quote. R50K/month before you've moved a single row. These tools are built for companies with data teams — not companies that need one.",
+      headline: "You hired a data analyst. The infrastructure didn't magically appear.",
+      body: "Data analysts build reports. Data engineers build the infrastructure those reports need. One analyst can't do both, and a single engineer can't build and maintain a production system alone. Months and budget go by with nothing to show.",
     },
   ],
   transition:
-    "You're not alone. Most mid-market companies hit this wall. You need real data infrastructure — without hiring a data team to run it.",
+    "You don't need another tool or another hire. You need a team that builds and runs your entire analytics infrastructure — so your people can focus on using the data.",
 }
 
 // -----------------------------------------
@@ -124,21 +124,21 @@ export interface SolutionSection {
 }
 
 export const solution: SolutionSection = {
-  headline: 'How your data flows through Hyper',
+  headline: 'From raw data to live dashboards',
   subheadline:
-    'HyperFlow and HyperStore work together to consolidate your data, make it analytics-ready, and power the dashboards and AI tools that drive growth.',
+    'Hyper connects your tools, warehouses your data, and delivers analytics-ready infrastructure — so your team gets dashboards and reports, not data engineering problems.',
   products: [
     {
       name: 'HyperFlow',
       tagline: 'Connect & Sync',
       description:
-        'Connects to your existing tools — CRMs, ERPs, spreadsheets, databases — and keeps everything syncing reliably.',
+        'Connects to your CRMs, ERPs, spreadsheets, and databases. Keeps everything syncing automatically — no engineering required.',
     },
     {
       name: 'HyperStore',
-      tagline: 'Store & Query',
+      tagline: 'Store & Analyse',
       description:
-        'A fully managed data warehouse designed for analytics. We handle the architecture, hosting, and optimization.',
+        'A managed data warehouse built for analytics. Clean, governed, queryable data that powers your dashboards and AI tools.',
     },
   ],
 }
@@ -160,32 +160,32 @@ export interface ProcessSection {
 }
 
 export const process: ProcessSection = {
-  headline: 'How our customers have experienced working with us',
-  subheadline: 'A clear, predictable path from first conversation to operating at scale.',
+  headline: 'A proven path to analytics that work',
+  subheadline: 'From first conversation to live dashboards — with full visibility at every step.',
   stages: [
     {
       phase: 'Discover',
-      headline: 'Mapped the data landscape',
+      headline: 'A complete diagnostic of your data landscape',
       description:
-        'We dug into their systems, interviewed their teams, and mapped every data source. They had a complete blueprint within days.',
+        'We map every data source, interview key stakeholders, and deliver a detailed blueprint — along with a clear roadmap. This diagnostic is valuable on its own, whether or not you move forward with us.',
     },
     {
       phase: 'Build',
-      headline: 'Built the infrastructure',
+      headline: 'Your infrastructure, built in weeks',
       description:
-        'Our engineers built pipelines, designed the warehouse, and set up monitoring. Weekly updates, no surprises.',
+        'Our engineers build your pipelines, design your warehouse, and connect your first dashboards. Weekly progress updates, no surprises. Most clients go live within 5 weeks.',
     },
     {
       phase: 'Validate',
-      headline: 'Tested everything together',
+      headline: 'Your team tests, verifies, and signs off',
       description:
-        "Their team tested queries, built reports, and verified the numbers. We didn't go live until they were confident.",
+        "Your team runs queries, checks reports, and verifies the numbers match reality. We don't go live until you're confident the data is right.",
     },
     {
       phase: 'Operate',
-      headline: 'Running with confidence',
+      headline: 'Managed infrastructure that grows with you',
       description:
-        "We've been monitoring 24/7 since. When something needs attention, we handle it — typically before anyone notices.",
+        "We monitor 24/7, handle issues before you notice them, and evolve your infrastructure as your business grows. This isn't a project — it's a long-term partnership.",
     },
   ],
 }
@@ -208,14 +208,15 @@ export interface ComparisonSection {
 }
 
 export const comparison: ComparisonSection = {
-  headline: 'Why companies choose Hyper',
-  subheadline: 'You have options. Here\'s how they compare.',
+  headline: 'Why mid-market companies choose Hyper',
+  subheadline: "You have options. Here's why most don't work for companies your size.",
   rows: [
-    { capability: 'Fully managed service', hyper: '✓', databricks: '✗', diy: '✗' },
-    { capability: 'No data team required', hyper: '✓', databricks: '✗', diy: '✗' },
-    { capability: 'Typical setup under 6 weeks', hyper: '✓', databricks: '✗', diy: '✗' },
-    { capability: 'Fixed monthly pricing', hyper: '✓', databricks: '✗', diy: '✗' },
-    { capability: 'Dedicated support team', hyper: '✓', databricks: '✗', diy: '✗' },
+    { capability: 'Fully managed — no engineers needed', hyper: '✓', databricks: '✗', diy: '✗' },
+    { capability: 'Live dashboards in under 6 weeks', hyper: '✓', databricks: '✗', diy: '✗' },
+    { capability: 'Fixed, predictable monthly pricing', hyper: '✓', databricks: '✗', diy: '~' },
+    { capability: 'No implementation team required', hyper: '✓', databricks: '✗', diy: '✗' },
+    { capability: 'Ongoing platform evolution included', hyper: '✓', databricks: '✗', diy: '✗' },
+    { capability: 'Dedicated support team', hyper: '✓', databricks: '~', diy: '✗' },
     { capability: 'Typical monthly cost', hyper: '$$', databricks: '$$$$', diy: '$$$$' },
   ],
 }
@@ -246,15 +247,15 @@ export interface ResultsSection {
 export const results: ResultsSection = {
   headline: 'Real results from real clients',
   stats: [
-    { value: '5 weeks', label: 'Average time to go live' },
-    { value: '20+ hours', label: 'Saved per week on manual reporting' },
+    { value: '5 weeks', label: 'Average time from kickoff to live dashboards' },
+    { value: '20+ hours', label: 'Saved weekly on manual reporting' },
     { value: '200+', label: 'Pre-built data connectors' },
-    { value: '95%+', label: 'Client retention rate' },
+    { value: '95%+', label: 'Client retention rate year-over-year' },
   ],
   testimonials: [
     {
       quote:
-        "Before Hyper, our marketing team spent two days every week pulling data from six different platforms into spreadsheets. Now it's automated. We've reallocated that time to actually analyzing the data and optimizing campaigns.",
+        "Before Hyper, our marketing team spent two days every week pulling data from six platforms into spreadsheets. Now we have live dashboards that update automatically. We've reallocated that time to actually optimising campaigns.",
       author: 'Ricky M.',
       title: 'CMO',
       company: '3Way Marketing',
@@ -262,17 +263,19 @@ export const results: ResultsSection = {
     },
     {
       quote:
-        "We evaluated Snowflake and Fivetran, but the costs were unpredictable and we didn't have data engineers to manage it. Hyper gave us the same capabilities at a fraction of the cost with none of the overhead.",
+        "We evaluated Snowflake and Databricks, but the costs were unpredictable and we'd have needed engineers just to manage the platform. Hyper gave us the same analytical capability at a fraction of the cost — and we were live in four weeks.",
       author: 'Sarah K.',
       title: 'Head of Operations',
       company: 'FinServe Co',
+      result: 'Live dashboards in 4 weeks, 60% lower cost',
     },
     {
       quote:
-        "Our AI chatbot project was stalled for six months because we couldn't get clean data. Hyper had us up and running in four weeks. The chatbot is now handling 40% of our customer inquiries.",
+        "What started as a dashboard project has grown into a complete analytics platform. Hyper's team evolves our infrastructure as we grow — it's like having a data department without the headcount.",
       author: 'Michael T.',
       title: 'CTO',
       company: 'TechStart',
+      result: 'From 2 dashboards to company-wide analytics in 12 months',
     },
   ],
 }
@@ -295,7 +298,7 @@ export interface SecuritySection {
 export const security: SecuritySection = {
   headline: 'Your data security is non-negotiable',
   subheadline:
-    'We take security as seriously as you do. Every layer of our infrastructure is designed to protect your most sensitive data.',
+    'Every layer of our infrastructure is built to protect your most sensitive data. No shortcuts.',
   features: [
     {
       name: 'SOC 2 Type II',
@@ -337,23 +340,23 @@ export interface FinalCtaSection {
 }
 
 export const finalCta: FinalCtaSection = {
-  badge: 'GET STARTED',
-  headline: 'Ready to turn your data into a competitive advantage?',
+  badge: 'START HERE',
+  headline: 'See what your analytics could look like',
   subheadline:
-    "30 minutes. No slides. We'll look at your actual data situation and show you exactly what we'd build.",
+    "Book a free discovery call. We'll map your data landscape and show you exactly what we'd build — no obligation, no sales deck.",
   ctas: [
     {
-      label: 'Book a 30-Minute Intro Call',
+      label: 'Book a Free Discovery Call',
       href: '#contact',
       variant: 'primary',
     },
     {
-      label: 'Watch the Product Demo',
+      label: 'Watch a 3-Minute Demo',
       href: '#demo',
       variant: 'secondary',
     },
   ],
-  trustBadges: ['No obligation', 'No pressure', 'Just conversation'],
+  trustBadges: ['Free data diagnostic included', 'No obligation', 'Live in under 5 weeks'],
 }
 
 // -----------------------------------------
@@ -391,7 +394,7 @@ export const footer: FooterContent = {
   brand: {
     name: 'hyper',
     tagline:
-      "Data infrastructure for growing businesses. Managed, so you don't have to be.",
+      "Analytics infrastructure for growing businesses. Managed, so you don't have to be.",
   },
   linkGroups: [
     {
@@ -447,7 +450,7 @@ export interface SiteMetadata {
 }
 
 export const siteMetadata: SiteMetadata = {
-  title: 'hyper - Data Infrastructure for Growing Businesses',
+  title: 'hyper — Managed Analytics Infrastructure for Growing Businesses',
   description:
-    'Turn scattered data into business intelligence without the enterprise price tag. HyperFlow and HyperStore give mid-market companies enterprise-grade data infrastructure as a managed service.',
+    'Go from scattered data to live dashboards in weeks. Hyper builds and manages your data warehouse, pipelines, and analytics infrastructure — so you never need to hire a data team.',
 }

@@ -38,7 +38,7 @@ export function AUComparisonMatrix() {
           <div className="au-comparison__table-wrap">
             <table className="au-comparison__table">
               <caption>
-                Comparison of Hyper vs Databricks vs DIY approach
+                Comparison of Hyper vs self-service platforms vs in-house hiring
               </caption>
               <thead>
                 <tr>
@@ -46,8 +46,8 @@ export function AUComparisonMatrix() {
                   <th scope="col" className="au-comparison__hyper-col">
                     Hyper
                   </th>
-                  <th scope="col">Databricks</th>
-                  <th scope="col">DIY</th>
+                  <th scope="col">Self-Service</th>
+                  <th scope="col">In-House</th>
                 </tr>
               </thead>
               <tbody>
