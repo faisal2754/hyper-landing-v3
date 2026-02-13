@@ -19,7 +19,7 @@
   --au-steel: #8899aa;
   --au-border: #e2e0db;
   --au-border-light: #eeedea;
-  --au-bg-cool: #f2f4f7;
+
   --au-green: #2a7d4f;
   --au-red: #c4444a;
 
@@ -715,7 +715,7 @@
 [data-page="authority"] .au-dataflow {
   padding: var(--au-section-pad) 0;
   position: relative;
-  background: var(--au-bg-cool);
+  background: var(--au-bg);
 }
 
 [data-page="authority"] .au-dataflow__header {
@@ -1247,7 +1247,7 @@
    ========================================= */
 [data-page="authority"] .au-comparison {
   padding: var(--au-section-pad) 0;
-  background: var(--au-bg-cool);
+  background: var(--au-bg);
 }
 
 [data-page="authority"] .au-comparison__header {
@@ -1296,7 +1296,7 @@
 }
 
 [data-page="authority"] .au-comparison__table thead {
-  background: var(--au-bg-cool);
+  background: var(--au-bg);
 }
 
 [data-page="authority"] .au-comparison__table th {

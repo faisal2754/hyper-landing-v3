@@ -16,35 +16,35 @@ interface BlockDef {
 }
 
 const BLOCKS: BlockDef[] = [
-  // Ground layer — wide foundation (4x3)
-  { col: 0, row: 0, stack: 0, label: 'CRM', shade: 0.0 },
-  { col: 1, row: 0, stack: 0, label: 'ERP', shade: 0.12 },
-  { col: 2, row: 0, stack: 0, label: 'DB', shade: 0.25 },
+  // Ground layer — Data Sources (4x3)
+  { col: 0, row: 0, stack: 0, label: 'PG', shade: 0.0 },
+  { col: 1, row: 0, stack: 0, label: 'MySQL', shade: 0.12 },
+  { col: 2, row: 0, stack: 0, label: 'Mongo', shade: 0.25 },
   { col: 3, row: 0, stack: 0, label: 'S3', shade: 0.38 },
-  { col: 0, row: 1, stack: 0, label: 'API', shade: 0.5 },
-  { col: 1, row: 1, stack: 0, label: 'CSV', shade: 0.62 },
-  { col: 2, row: 1, stack: 0, label: 'SaaS', shade: 0.75 },
-  { col: 3, row: 1, stack: 0, shade: 0.88 },
-  { col: 0, row: 2, stack: 0, label: 'IoT', shade: 0.3 },
-  { col: 1, row: 2, stack: 0, label: 'SQL', shade: 0.45 },
+  { col: 0, row: 1, stack: 0, label: 'Kafka', shade: 0.5 },
+  { col: 1, row: 1, stack: 0, label: 'GCS', shade: 0.62 },
+  { col: 2, row: 1, stack: 0, label: 'API', shade: 0.75 },
+  { col: 3, row: 1, stack: 0, label: 'SFTP', shade: 0.88 },
+  { col: 0, row: 2, stack: 0, label: 'Redis', shade: 0.3 },
+  { col: 1, row: 2, stack: 0, label: 'CSV', shade: 0.45 },
   { col: 2, row: 2, stack: 0, shade: 0.6 },
 
-  // Layer 1 — narrower (3x2)
-  { col: 0, row: 0, stack: 1, label: 'ETL', shade: 0.15, accent: true },
-  { col: 1, row: 0, stack: 1, label: 'SYNC', shade: 0.35, accent: true },
-  { col: 2, row: 0, stack: 1, shade: 0.55 },
-  { col: 0, row: 1, stack: 1, label: 'PIPE', shade: 0.7, accent: true },
-  { col: 1, row: 1, stack: 1, label: 'FLOW', shade: 0.4, accent: true },
+  // Layer 1 — Ingestion & Transform (3x2)
+  { col: 0, row: 0, stack: 1, label: 'dbt', shade: 0.15, accent: true },
+  { col: 1, row: 0, stack: 1, label: 'Spark', shade: 0.35, accent: true },
+  { col: 2, row: 0, stack: 1, label: 'DAG', shade: 0.55, accent: true },
+  { col: 0, row: 1, stack: 1, label: 'CDC', shade: 0.7, accent: true },
+  { col: 1, row: 1, stack: 1, label: 'ELT', shade: 0.4, accent: true },
   { col: 2, row: 1, stack: 1, shade: 0.2 },
 
-  // Layer 2 — core (2x2)
-  { col: 0, row: 0, stack: 2, label: 'STORE', shade: 0.1, accent: true },
-  { col: 1, row: 0, stack: 2, label: 'INDEX', shade: 0.5, accent: true },
-  { col: 0, row: 1, stack: 2, label: 'CACHE', shade: 0.65, accent: true },
+  // Layer 2 — Warehouse (2x2)
+  { col: 0, row: 0, stack: 2, label: 'DWH', shade: 0.1, accent: true },
+  { col: 1, row: 0, stack: 2, label: 'Lake', shade: 0.5, accent: true },
+  { col: 0, row: 1, stack: 2, label: 'Marts', shade: 0.65, accent: true },
   { col: 1, row: 1, stack: 2, shade: 0.3 },
 
-  // Top — single capstone
-  { col: 0, row: 0, stack: 3, label: 'AI', shade: 0.05, accent: true },
+  // Top — Analytics capstone
+  { col: 0, row: 0, stack: 3, label: 'BI', shade: 0.05, accent: true },
 ]
 
 /* ------------------------------------------------------------------ */
@@ -96,7 +96,7 @@ function faceColors(shade: number, accent: boolean) {
 /*  Cube polygons                                                      */
 /* ------------------------------------------------------------------ */
 
-function CubePolygons({ shade, label, accent }: { shade: number; label?: string; accent?: boolean }) {
+function CubePolygons({ shade, label, accent, stack }: { shade: number; label?: string; accent?: boolean; stack?: number }) {
   const colors = faceColors(shade, !!accent)
   const w = TILE_W
   const h = TILE_H
@@ -106,6 +106,9 @@ function CubePolygons({ shade, label, accent }: { shade: number; label?: string;
   const leftFace = `${-w},0 0,${h} 0,${h + bh} ${-w},${bh}`
   const rightFace = `${w},0 0,${h} 0,${h + bh} ${w},${bh}`
 
+  // Source blocks (stack 0) get subtle table-row lines on the left face
+  const isSource = stack === 0
+
   return (
     <g>
       <polygon points={leftFace} fill={colors.left} stroke="#0a1a2e" strokeWidth="0.5" strokeLinejoin="round" />
@@ -113,6 +116,26 @@ function CubePolygons({ shade, label, accent }: { shade: number; label?: string;
       <polygon points={topFace} fill={colors.top} stroke="#0a1a2e" strokeWidth="0.5" strokeLinejoin="round" />
       {/* Shine on top face */}
       <polygon points={topFace} fill="url(#top-shine)" opacity={accent ? 0.3 : 0.15} />
+      {/* Data-table row lines on source blocks */}
+      {isSource && label && (
+        <g opacity={0.15}>
+          {[0.3, 0.5, 0.7].map((t, i) => {
+            const y1 = h + bh * t
+            const y2 = y1
+            return (
+              <line
+                key={i}
+                x1={-w + 6}
+                y1={y1}
+                x2={-2}
+                y2={y2}
+                stroke="#c0d0dd"
+                strokeWidth="0.5"
+              />
+            )
+          })}
+        </g>
+      )}
       {label && (
         <text
           x={0}
@@ -317,7 +340,7 @@ function AnimatedBlock({
       variants={variants}
       style={{ originX: '0px', originY: '0px' }}
     >
-      <CubePolygons shade={block.shade} label={block.label} accent={block.accent} />
+      <CubePolygons shade={block.shade} label={block.label} accent={block.accent} stack={block.stack} />
     </motion.g>
   )
 }
@@ -356,6 +379,51 @@ function ConnectionLines({ svgCenter, visible }: { svgCenter: { x: number; y: nu
             animate={{ opacity: visible ? 0.2 : 0 }}
             transition={{ duration: 0.8, delay: i * 0.1 }}
           />
+        )
+      })}
+    </g>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/*  Layer annotations                                                  */
+/* ------------------------------------------------------------------ */
+
+const LAYER_LABELS = [
+  { stack: 0, text: 'SOURCES', col: -0.6, row: 2.6 },
+  { stack: 1, text: 'TRANSFORM', col: -0.6, row: 1.6 },
+  { stack: 2, text: 'WAREHOUSE', col: -0.4, row: 1.2 },
+  { stack: 3, text: 'ANALYTICS', col: -0.3, row: 0.4 },
+]
+
+function LayerAnnotations({
+  svgCenter,
+  visible,
+}: {
+  svgCenter: { x: number; y: number }
+  visible: boolean
+}) {
+  return (
+    <g>
+      {LAYER_LABELS.map((l, i) => {
+        const pos = isoPosition(l.col, l.row, l.stack)
+        return (
+          <motion.text
+            key={i}
+            x={svgCenter.x + pos.x}
+            y={svgCenter.y + pos.y + 8}
+            textAnchor="end"
+            fill="#5aadee"
+            fontSize="6.5"
+            fontWeight={600}
+            fontFamily="'IBM Plex Mono', monospace"
+            style={{ letterSpacing: '0.12em', pointerEvents: 'none' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: visible ? 0.55 : 0 }}
+            transition={{ duration: 0.6, delay: 0.3 + i * 0.15 }}
+          >
+            {l.text}
+          </motion.text>
         )
       })}
     </g>
@@ -476,6 +544,9 @@ export function IsometricBlocks() {
 
         {/* Connection lines */}
         <ConnectionLines svgCenter={svgCenter} visible={phase === 'assembled'} />
+
+        {/* Layer annotations */}
+        <LayerAnnotations svgCenter={svgCenter} visible={phase === 'assembled'} />
 
         {/* Ground shadow */}
         <motion.ellipse
