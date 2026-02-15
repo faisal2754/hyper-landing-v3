@@ -27,7 +27,18 @@ export function AUProblem() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
-          <p className="au-problem__transition">{problem.transition}</p>
+          <div className="au-problem__transition">
+            <div className="au-problem__transition-accent" aria-hidden="true" />
+            <blockquote className="au-problem__transition-text">
+              <span className="au-problem__transition-lead">
+                You don't need another platform, another tool, or another hire.
+              </span>
+              {' '}You need a specialist team that delivers the dashboards and
+              analytics your leadership needs — and fully manages the
+              infrastructure behind them, so your people can focus on making
+              better decisions.
+            </blockquote>
+          </div>
         </ScrollReveal>
       </div>
     </section>

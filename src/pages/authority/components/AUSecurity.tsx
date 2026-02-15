@@ -2,11 +2,10 @@ import { security } from '../../../data/content'
 import { ScrollReveal } from '../../../shared/components/ScrollReveal'
 
 /**
- * Custom SVG icons for each security feature.
- * Avoids generic lucide icons — these are purpose-built.
+ * Minimal SVG icons for each security feature.
  */
 function SecurityIcon({ name }: { name: string }) {
-  const common = { width: 22, height: 22, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.75, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
+  const common = { width: 20, height: 20, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const }
 
   switch (name) {
     case 'SOC 2 Type II':
@@ -67,37 +66,30 @@ export function AUSecurity() {
   return (
     <section className="au-security" id="security" aria-label="Data safety">
       <div className="au-container">
-        <div className="au-security__inner">
-          <ScrollReveal>
-            <div className="au-security__content">
-              <p className="au-section-label">Data safety</p>
-              <h2 className="au-security__title">{security.headline}</h2>
-              <p className="au-security__subtitle">{security.subheadline}</p>
-              <div className="au-security__trust-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <path d="M12 2l7 4v6c0 5.25-3.5 9.75-7 11-3.5-1.25-7-5.75-7-11V6l7-4z" />
-                </svg>
-                SOC 2 Type II Certified
-              </div>
-            </div>
-          </ScrollReveal>
+        <ScrollReveal>
+          <div className="au-security__header">
+            <p className="au-section-label">Security</p>
+            <h2 className="au-security__title">{security.headline}</h2>
+            <p className="au-security__subtitle">{security.subheadline}</p>
+          </div>
+        </ScrollReveal>
 
-          <ScrollReveal delay={0.1}>
-            <div className="au-security__grid">
-              {security.features.map((feature, i) => (
-                <div key={i} className="au-security__card">
-                  <div className="au-security__card-icon">
-                    <SecurityIcon name={feature.name} />
-                  </div>
-                  <div>
-                    <h3 className="au-security__card-name">{feature.name}</h3>
-                    <p className="au-security__card-desc">{feature.description}</p>
-                  </div>
+        <ScrollReveal delay={0.1}>
+          <div className="au-security__grid">
+            {security.features.map((feature, i) => (
+              <div key={i} className="au-security__card">
+                <div className="au-security__card-number">
+                  {String(i + 1).padStart(2, '0')}
                 </div>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
+                <div className="au-security__card-icon">
+                  <SecurityIcon name={feature.name} />
+                </div>
+                <h3 className="au-security__card-name">{feature.name}</h3>
+                <p className="au-security__card-desc">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )
