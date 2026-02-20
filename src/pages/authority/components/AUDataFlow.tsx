@@ -78,11 +78,11 @@ export function AUDataFlow() {
               transition={{ delay: 0.15, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <div className="au-dataflow__platform-block">
-                <div className="au-dataflow__platform-name">HyperFlow</div>
+                <div className="au-dataflow__platform-name">HyprFlow</div>
                 <div className="au-dataflow__platform-desc">Connect &amp; Sync</div>
               </div>
               <div className="au-dataflow__platform-block">
-                <div className="au-dataflow__platform-name">HyperStore</div>
+                <div className="au-dataflow__platform-name">HyprStore</div>
                 <div className="au-dataflow__platform-desc">Store &amp; Query</div>
               </div>
             </motion.div>

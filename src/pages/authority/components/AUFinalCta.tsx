@@ -1,5 +1,6 @@
 import { finalCta } from '../../../data/content'
 import { ScrollReveal } from '../../../shared/components/ScrollReveal'
+import logoSvg from '../../../../assets/logo.svg'
 
 interface AUFinalCtaProps {
   onOpenContact?: () => void
@@ -10,6 +11,7 @@ export function AUFinalCta({ onOpenContact }: AUFinalCtaProps) {
     <section className="au-final-cta" id="contact" aria-label="Call to action">
       <div className="au-container" style={{ position: 'relative' }}>
         <ScrollReveal>
+          <img src={logoSvg} alt="" className="au-final-cta__logo" />
           <div className="au-final-cta__badge">{finalCta.badge}</div>
         </ScrollReveal>
 

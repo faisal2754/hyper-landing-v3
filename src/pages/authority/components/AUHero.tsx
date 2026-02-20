@@ -1,6 +1,7 @@
 import { hero } from '../../../data/content'
 import { ScrollReveal } from '../../../shared/components/ScrollReveal'
 import { IsometricBlocks } from './hero-graphics/IsometricBlocks'
+import logoSvg from '../../../../assets/logo.svg'
 
 interface AUHeroProps {
   onOpenContact?: () => void
@@ -12,7 +13,10 @@ export function AUHero({ onOpenContact }: AUHeroProps) {
       <div className="au-container au-hero__inner">
         <div className="au-hero__content">
           <ScrollReveal delay={0}>
-            <p className="au-hero__eyebrow">{hero.eyebrow}</p>
+            <p className="au-hero__eyebrow">
+              <img src={logoSvg} alt="" className="au-hero__eyebrow-logo" />
+              {hero.eyebrow}
+            </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>

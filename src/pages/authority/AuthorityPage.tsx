@@ -12,6 +12,7 @@ import { AUComparisonMatrix } from './components/AUComparisonMatrix'
 import { AUSecurity } from './components/AUSecurity'
 import { AUFinalCta } from './components/AUFinalCta'
 import { AUContactModal } from './components/AUContactModal'
+import logoSvg from '../../../assets/logo.svg'
 
 export default function AuthorityPage() {
   const [contactOpen, setContactOpen] = useState(false)
@@ -41,6 +42,16 @@ export default function AuthorityPage() {
 
         <AUFinalCta onOpenContact={() => setContactOpen(true)} />
       </main>
+
+      <footer className="au-footer">
+        <div className="au-container au-footer__inner">
+          <a href="#" className="au-footer__brand">
+            <img src={logoSvg} alt="" className="au-footer__logo" />
+            Hypr
+          </a>
+          <p className="au-footer__copy">&copy; {new Date().getFullYear()} Hypr. All rights reserved.</p>
+        </div>
+      </footer>
 
       <AUContactModal
         open={contactOpen}

@@ -1,4 +1,4 @@
-Hyper Landing Page Copy
+Hypr Landing Page Copy
 Navigation
 Products
 Industries
@@ -47,12 +47,12 @@ Transition: You're not alone. Most mid-market companies hit this wall. You need 
 02 — The Solution
 Headline: Two products. One data foundation.
 
-Subheadline: HyperFlow and HyperStore work together to consolidate your data, make it analytics-ready, and power the dashboards and AI tools that drive growth.
+Subheadline: HyprFlow and HyprStore work together to consolidate your data, make it analytics-ready, and power the dashboards and AI tools that drive growth.
 
-HyperFlow — Connect & Sync
+HyprFlow — Connect & Sync
 Tagline: Your data, always in sync
 
-HyperFlow connects to your existing tools — CRMs, ERPs, spreadsheets, databases, APIs — and keeps everything syncing reliably. No more manual exports. No more broken pipelines.
+HyprFlow connects to your existing tools — CRMs, ERPs, spreadsheets, databases, APIs — and keeps everything syncing reliably. No more manual exports. No more broken pipelines.
 
 Capabilities:
 
@@ -62,10 +62,10 @@ Automatic error handling — Pipelines self-heal; you get alerts, not emergencie
 Custom transformations — Clean, deduplicate, and reshape data automatically
 Best for: Companies with existing databases or tools who need reliable automated data movement
 
-HyperStore — Store & Analyze
+HyprStore — Store & Analyze
 Tagline: A data warehouse that's actually ready to use
 
-HyperStore is a fully managed data warehouse designed for analytics, not transactions. We handle the architecture, hosting, backups, and optimization — you get fast queries and reliable reporting.
+HyprStore is a fully managed data warehouse designed for analytics, not transactions. We handle the architecture, hosting, backups, and optimization — you get fast queries and reliable reporting.
 
 Capabilities:
 
@@ -76,29 +76,29 @@ Zero maintenance — We handle backups, security, and updates
 Best for: Companies building dashboards, reports, or AI capabilities who need a proper data foundation
 
 Combined Note
-Flow: Sources → HyperFlow → HyperStore → Outputs
+Flow: Sources → HyprFlow → HyprStore → Outputs
 
-Here's the truth: most companies need both. HyperFlow moves the data; HyperStore makes it queryable. Together, they're the foundation for dashboards, reports, and AI.
+Here's the truth: most companies need both. HyprFlow moves the data; HyprStore makes it queryable. Together, they're the foundation for dashboards, reports, and AI.
 
 03 — Add-Ons
 Headline: Ready for more? Add analytics and AI.
 
 Subheadline: Once your data foundation is in place, unlock powerful insights with our add-on products.
 
-HyperLens — See Your Data Clearly
+HyprLens — See Your Data Clearly
 Dashboards your team will actually use. We build them in your preferred tool — Power BI, Tableau, or Looker — and train your team to get value from day one.
 
-CTA: Learn about HyperLens
+CTA: Learn about HyprLens
 
-HyperMind — AI That Knows Your Business
-Ask questions in plain English. Get anomaly alerts before problems become crises. HyperMind is like having a data analyst who never takes vacation — and knows every number in your business.
+HyprMind — AI That Knows Your Business
+Ask questions in plain English. Get anomaly alerts before problems become crises. HyprMind is like having a data analyst who never takes vacation — and knows every number in your business.
 
-What HyperMind can do:
+What HyprMind can do:
 
 What drove the revenue spike last Tuesday?
 Alert me when customer churn exceeds 5%
 Compare Q3 performance across all regions
-CTA: See HyperMind in action
+CTA: See HyprMind in action
 
 04 — How It Works
 Headline: A clear path from kickoff to go-live
@@ -134,14 +134,14 @@ We monitor everything 24/7. When something breaks, we fix it — usually before 
 Deliverable: Managed service with engineering support
 
 05 — Industries
-Headline: See how companies like yours use Hyper
+Headline: See how companies like yours use Hypr
 
-Subheadline: We've helped companies across industries unlock the value in their data. Here's how teams like yours use HyperFlow and HyperStore.
+Subheadline: We've helped companies across industries unlock the value in their data. Here's how teams like yours use HyprFlow and HyprStore.
 
 Retail & E-commerce — Finally see all your sales in one place
 Challenge: You receive sales data in 12 different formats from distributors, marketplaces, and POS systems. Reconciling inventory takes days. Demand forecasting is guesswork.
 
-Solution: HyperFlow automatically ingests data from all channels — Shopify, Amazon, EDI feeds, distributor portals. HyperStore unifies it into a single view for inventory optimization and sales analytics.
+Solution: HyprFlow automatically ingests data from all channels — Shopify, Amazon, EDI feeds, distributor portals. HyprStore unifies it into a single view for inventory optimization and sales analytics.
 
 Results:
 
@@ -151,7 +151,7 @@ Accurate demand forecasting with 3-week lookahead
 Financial Services — Pass your next audit without the panic
 Challenge: Regulators want to know where your numbers come from. Your current systems can't trace data from source to report. Audit season is a nightmare.
 
-Solution: HyperFlow maintains complete audit trails for every data movement. HyperStore provides the governance layer financial services require — with SOC 2 compliance and role-based access controls.
+Solution: HyprFlow maintains complete audit trails for every data movement. HyprStore provides the governance layer financial services require — with SOC 2 compliance and role-based access controls.
 
 Results:
 
@@ -161,7 +161,7 @@ Secure, compliant data infrastructure
 Healthcare & Life Sciences — Connect clinical and operations without compromising security
 Challenge: Research data lives in silos. Operational metrics are in spreadsheets. Getting insights means manual work that delays critical decisions.
 
-Solution: HyperFlow connects clinical systems, research databases, and operational tools while maintaining strict security controls. HyperStore provides HIPAA-compliant storage optimized for analytical queries.
+Solution: HyprFlow connects clinical systems, research databases, and operational tools while maintaining strict security controls. HyprStore provides HIPAA-compliant storage optimized for analytical queries.
 
 Results:
 
@@ -171,7 +171,7 @@ Research insights delivered in hours, not weeks
 AI & Analytics Enablement — Stop your AI projects from stalling
 Challenge: Your AI vendor says you need "clean, unified data." Your data scientists spend 80% of their time finding and preparing data. Models never make it to production.
 
-Solution: HyperFlow and HyperStore create the data foundation that makes AI possible. Clean, deduplicated, properly structured data — ready for machine learning, predictive models, and LLM applications.
+Solution: HyprFlow and HyprStore create the data foundation that makes AI possible. Clean, deduplicated, properly structured data — ready for machine learning, predictive models, and LLM applications.
 
 Results:
 
@@ -179,11 +179,11 @@ Data scientist time on prep reduced by 70%
 First ML model to production in 6 weeks
 Foundation for chatbots, predictions, and recommendations
 06 — Comparison
-Headline: Why companies choose Hyper
+Headline: Why companies choose Hypr
 
 Subheadline: You have options. Here's why mid-market companies choose us.
 
-Capability Hyper Enterprise Stack (Fivetran + Snowflake + Looker) DIY / In-House
+Capability Hypr Enterprise Stack (Fivetran + Snowflake + Looker) DIY / In-House
 Setup time 4-6 weeks 3-6 months 6-12 months
 Monthly cost (typical) R15K-R35K fixed R50K-R150K+ variable R80K+ (salaries)
 Pricing model Fixed monthly Usage-based (unpredictable) Headcount
@@ -193,9 +193,9 @@ Support Dedicated team Ticket queue Internal only
 Customization Configured for you Self-service Full control
 Best for Mid-market companies Enterprise with data teams Tech companies with resources
 Here's what it comes down to
-Fivetran and Snowflake are great — if you have a data team to run them. Most mid-market companies don't. That's not a weakness; it's just a different stage of growth. We built Hyper for companies who need enterprise results without enterprise overhead.
+Fivetran and Snowflake are great — if you have a data team to run them. Most mid-market companies don't. That's not a weakness; it's just a different stage of growth. We built Hypr for companies who need enterprise results without enterprise overhead.
 
-Hyper gives you the same capabilities, delivered as a fully managed service with fixed monthly pricing. You get enterprise-grade infrastructure without hiring a data team.
+Hypr gives you the same capabilities, delivered as a fully managed service with fixed monthly pricing. You get enterprise-grade infrastructure without hiring a data team.
 
 CTA: See detailed comparison guide
 
@@ -236,7 +236,7 @@ Implementation: Custom Monthly: R35,000+
 Unlimited data sources
 Advanced architecture
 Multi-domain data warehouse
-HyperLens & HyperMind add-ons
+HyprLens & HyprMind add-ons
 Dedicated support team
 CTA: Contact us
 
@@ -259,15 +259,15 @@ Stats
 60-70% — Typical cost savings vs. enterprise tools
 95%+ — Client retention rate
 Testimonials
-"Before Hyper, our marketing team spent two days every week pulling data from six different platforms into spreadsheets. Now it's automated. We've reallocated that time to actually analyzing the data and optimizing campaigns. The ROI was obvious within the first month."
+"Before Hypr, our marketing team spent two days every week pulling data from six different platforms into spreadsheets. Now it's automated. We've reallocated that time to actually analyzing the data and optimizing campaigns. The ROI was obvious within the first month."
 
 — Ricky M., CMO, 3Way Marketing Marketing team reclaimed 16+ hours per week
 
-"We evaluated Snowflake and Fivetran, but the costs were unpredictable and we didn't have data engineers to manage it. Hyper gave us the same capabilities at a third of the cost with none of the overhead."
+"We evaluated Snowflake and Fivetran, but the costs were unpredictable and we didn't have data engineers to manage it. Hypr gave us the same capabilities at a third of the cost with none of the overhead."
 
 — Sarah K., Head of Operations, FinServe Co
 
-"Our AI chatbot project was stalled for six months because we couldn't get clean data. Hyper had us up and running in four weeks. The chatbot is now handling 40% of our customer inquiries."
+"Our AI chatbot project was stalled for six months because we couldn't get clean data. Hypr had us up and running in four weeks. The chatbot is now handling 40% of our customer inquiries."
 
 — Michael T., CTO, TechStart
 
@@ -297,7 +297,7 @@ How does pricing work? Are there hidden costs? Our pricing is fixed monthly. No 
 
 What happens if something breaks? Our monitoring catches most issues before you notice them. When something does need attention, you have direct access to our engineering team — not a ticket queue. Response times are defined in your SLA, typically under 4 hours for critical issues.
 
-Can we add AI capabilities later? Absolutely. HyperFlow and HyperStore create the data foundation that makes AI possible. When you're ready for natural language queries, predictive models, or chatbots, HyperMind plugs directly into your existing infrastructure.
+Can we add AI capabilities later? Absolutely. HyprFlow and HyprStore create the data foundation that makes AI possible. When you're ready for natural language queries, predictive models, or chatbots, HyprMind plugs directly into your existing infrastructure.
 
 What data sources do you support? We have 200+ pre-built connectors covering most common business tools — CRMs, ERPs, marketing platforms, databases, spreadsheets, and APIs. If you have a niche system we haven't connected before, we can build a custom connector.
 
@@ -319,11 +319,11 @@ Tertiary CTA: Get the Mid-Market Data Playbook
 Trust Badges: No obligation · No pressure · Just conversation
 
 Footer
-CTA Bar: Questions? Talk to us — hello@hyper.co.za · +27 (0) 00 000 0000
+CTA Bar: Questions? Talk to us — hello@usehypr.com
 
-Brand: hyper — Data infrastructure for growing businesses. Managed, so you don't have to be.
+Brand: hypr — Data infrastructure for growing businesses. Managed, so you don't have to be.
 
-Products: HyperFlow, HyperStore, HyperLens, HyperMind
+Products: HyprFlow, HyprStore, HyprLens, HyprMind
 
 Industries: Retail & E-commerce, Financial Services, Healthcare, AI Enablement
 
@@ -331,9 +331,9 @@ Resources: Case Studies, Documentation, Blog, Security
 
 Company: About Us, Careers, Contact, Privacy Policy
 
-Bottom Bar: © 2025 hyper. All rights reserved. · All systems operational
+Bottom Bar: © 2025 hypr. All rights reserved. · All systems operational
 
 Site Metadata
-Title: hyper - Data Infrastructure for Growing Businesses
+Title: hypr - Data Infrastructure for Growing Businesses
 
-Description: Turn scattered data into business intelligence without the enterprise price tag. HyperFlow and HyperStore give mid-market companies enterprise-grade data infrastructure as a managed service.
+Description: Turn scattered data into business intelligence without the enterprise price tag. HyprFlow and HyprStore give mid-market companies enterprise-grade data infrastructure as a managed service.

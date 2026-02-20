@@ -1,4 +1,4 @@
-# Mobile Compatibility Audit -- Hyper Landing Page
+# Mobile Compatibility Audit -- Hypr Landing Page
 
 **Date:** 2026-02-16
 **Viewports tested:** 375px (iPhone SE), 768px (iPad portrait)
@@ -267,7 +267,7 @@ All screenshots are in `./mobile-audit-screenshots/`:
 | `375-04-problem-cards.png` | Problem cards -- single column, working correctly |
 | `375-05-problem-bridge.png` | Problem bridge text + third card |
 | `375-06-solution-header.png` | Solution section header + data sources list |
-| `375-07-dataflow-diagram.png` | Data flow (HyperFlow/HyperStore + outputs) |
+| `375-07-dataflow-diagram.png` | Data flow (HyprFlow/HyprStore + outputs) |
 | `375-08-product-cards.png` | Product cards + stats start |
 | `375-09-stats.png` | Stats wall + testimonials heading (large gap visible) |
 | `375-10-testimonials.png` | Testimonial cards stacked |

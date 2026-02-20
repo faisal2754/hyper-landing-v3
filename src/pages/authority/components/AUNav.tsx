@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react'
 import { navigation } from '../../../data/content'
 import { Menu, X } from 'lucide-react'
+import logoSvg from '../../../../assets/logo.svg'
 
 export function AUNav() {
   const [open, setOpen] = useState(false)
@@ -16,8 +17,9 @@ export function AUNav() {
   return (
     <nav className="au-nav" role="navigation" aria-label="Main navigation">
       <div className="au-container au-nav__inner">
-        <a href="#" className="au-nav__brand" aria-label="Hyper home">
-          hyper
+        <a href="#" className="au-nav__brand" aria-label="Hypr home">
+          <img src={logoSvg} alt="" className="au-nav__brand-logo" />
+          Hypr
         </a>
 
         <button

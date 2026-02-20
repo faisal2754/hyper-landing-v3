@@ -508,7 +508,7 @@ function Blueprint() {
 
         {/* Title block */}
         <div className="bp-titleblock">
-          <div className="bp-titleblock__title">HYPER SYSTEMS | DATA ARCHITECTURE</div>
+          <div className="bp-titleblock__title">HYPR SYSTEMS | DATA ARCHITECTURE</div>
           <div className="bp-titleblock__cell">
             <span className="bp-titleblock__label">Project</span>
             <span className="bp-titleblock__value">DATA-ARCH</span>
@@ -569,7 +569,7 @@ function Blueprint() {
 
             <div className="bp-plat-sec">
               <div className="bp-plat-lbl">Data Ingestion Layer</div>
-              <div className="bp-plat-name">HyperFlow</div>
+              <div className="bp-plat-name">HyprFlow</div>
             </div>
 
             <div className="bp-plat-divider">
@@ -578,7 +578,7 @@ function Blueprint() {
 
             <div className="bp-plat-sec">
               <div className="bp-plat-lbl">Storage &amp; Query Engine</div>
-              <div className="bp-plat-name">HyperStore</div>
+              <div className="bp-plat-name">HyprStore</div>
             </div>
           </motion.div>
 

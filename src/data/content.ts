@@ -142,13 +142,13 @@ export const solution: SolutionSection = {
     'Our specialist team builds and operates your complete data engineering layer, including warehousing, orchestration, governance, and monitoring, so your organisation gets clean, reliable, queryable data without building the capability in-house. Dashboards, analytics, and better decisions follow from a foundation you can trust.',
   products: [
     {
-      name: 'HyperFlow',
+      name: 'HyprFlow',
       tagline: 'Connect & Sync',
       description:
         'Every data source, from CRMs and ERPs to spreadsheets and databases, connected into a single, automated pipeline. Data arrives clean, on time, and governed. No engineering effort from your team.',
     },
     {
-      name: 'HyperStore',
+      name: 'HyprStore',
       tagline: 'Warehouse & Govern',
       description:
         'A fully managed, production-grade data warehouse: modelled, governed, and queryable from day one. The reliable foundation your organisation needs for reporting, business intelligence, and AI-readiness.',
@@ -181,7 +181,7 @@ export const process: ProcessSection = {
       phase: 'Discover',
       headline: 'A diagnostic worth having, even if you stop here',
       description:
-        'We map every data source, interview stakeholders, and deliver a prioritised roadmap with quick wins: a standalone deliverable your team can act on, whether or not you move forward with Hyper.',
+        'We map every data source, interview stakeholders, and deliver a prioritised roadmap with quick wins: a standalone deliverable your team can act on, whether or not you move forward with Hypr.',
       duration: 'Week 1',
     },
     {
@@ -237,7 +237,7 @@ export const comparison: ComparisonSection = {
     'Every approach has trade-offs. Here\u2019s what each one actually costs, how long it takes, and what it demands from your team.',
   approaches: [
     {
-      name: 'Hyper',
+      name: 'Hypr',
       tagline: 'Managed analytics partner',
       highlighted: true,
       metrics: [
@@ -313,7 +313,7 @@ export const results: ResultsSection = {
   testimonials: [
     {
       quote:
-        "Before Hyper, our marketing team spent two days every week pulling data from six platforms into spreadsheets. Now we have live dashboards that update automatically. We've reallocated that time to actually optimising campaigns.",
+        "Before Hypr, our marketing team spent two days every week pulling data from six platforms into spreadsheets. Now we have live dashboards that update automatically. We've reallocated that time to actually optimising campaigns.",
       author: 'Ricky M.',
       title: 'CMO',
       company: '3Way Marketing',
@@ -321,7 +321,7 @@ export const results: ResultsSection = {
     },
     {
       quote:
-        "We evaluated Databricks and other DIY platforms, but the costs were unpredictable and we'd have needed engineers just to manage them. Hyper gave us live dashboards at a fraction of the cost, fully managed and live in four weeks.",
+        "We evaluated Databricks and other DIY platforms, but the costs were unpredictable and we'd have needed engineers just to manage them. Hypr gave us live dashboards at a fraction of the cost, fully managed and live in four weeks.",
       author: 'Sarah K.',
       title: 'Head of Operations',
       company: 'FinServe Co',
@@ -329,7 +329,7 @@ export const results: ResultsSection = {
     },
     {
       quote:
-        "What started as a dashboard project has grown into a company-wide analytics platform. Hyper's team evolves our infrastructure as we grow. It's like having an entire data department without the headcount.",
+        "What started as a dashboard project has grown into a company-wide analytics platform. Hypr's team evolves our infrastructure as we grow. It's like having an entire data department without the headcount.",
       author: 'Michael T.',
       title: 'CTO',
       company: 'TechStart',
@@ -431,7 +431,6 @@ export interface FooterContent {
   ctaBar: {
     text: string
     email: string
-    phone: string
   }
   brand: {
     name: string
@@ -447,11 +446,10 @@ export interface FooterContent {
 export const footer: FooterContent = {
   ctaBar: {
     text: 'Questions? Talk to us',
-    email: 'hello@hyper.co.za',
-    phone: '+27 (0) 00 000 0000',
+    email: 'hello@usehypr.com',
   },
   brand: {
-    name: 'hyper',
+    name: 'hypr',
     tagline:
       "Dashboards, analytics, and data infrastructure, built and managed by specialists so you never have to hire your own.",
   },
@@ -459,10 +457,10 @@ export const footer: FooterContent = {
     {
       title: 'Products',
       links: [
-        { label: 'HyperFlow', href: '#hyperflow' },
-        { label: 'HyperStore', href: '#hyperstore' },
-        { label: 'HyperLens', href: '#hyperlens' },
-        { label: 'HyperMind', href: '#hypermind' },
+        { label: 'HyprFlow', href: '#hyprflow' },
+        { label: 'HyprStore', href: '#hyprstore' },
+        { label: 'HyprLens', href: '#hyprlens' },
+        { label: 'HyprMind', href: '#hyprmind' },
       ],
     },
     {
@@ -494,7 +492,7 @@ export const footer: FooterContent = {
     },
   ],
   bottomBar: {
-    copyright: '\u00A9 2025 hyper. All rights reserved.',
+    copyright: '\u00A9 2025 hypr. All rights reserved.',
     status: 'All systems operational',
   },
 }
@@ -509,7 +507,7 @@ export interface SiteMetadata {
 }
 
 export const siteMetadata: SiteMetadata = {
-  title: 'hyper | Dashboards & Analytics, Fully Managed for Mid-Market Companies',
+  title: 'hypr | Dashboards & Analytics, Fully Managed for Mid-Market Companies',
   description:
-    "Go from scattered data to live dashboards in weeks. Hyper's specialist team builds and fully manages your analytics, data warehouse, and pipelines so you get the visibility to make better decisions without hiring a data team.",
+    "Go from scattered data to live dashboards in weeks. Hypr's specialist team builds and fully manages your analytics, data warehouse, and pipelines so you get the visibility to make better decisions without hiring a data team.",
 }
